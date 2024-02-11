@@ -9,7 +9,6 @@ import UIKit
 import SDWebImage
 
 class MusicTableViewCell: UITableViewCell {
-    @IBOutlet weak var albomImage: UIImageView!
     @IBOutlet weak var songLabel: UILabel!
     @IBOutlet weak var singerLabel: UILabel!
     
@@ -27,9 +26,8 @@ class MusicTableViewCell: UITableViewCell {
     
     func setData(music: Itunes){
         
-        singerLabel.text = music.singer
-        songLabel.text = music.track
-        albomImage.sd_setImage(with: URL(string: music.artworkUrl100), completed: nil)
+        singerLabel.text = music.user
+        songLabel.text = music.text
         
     }
 
